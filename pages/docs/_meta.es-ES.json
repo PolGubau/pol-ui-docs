@@ -1,0 +1,10 @@
+{
+ "introduction": "Introducción",
+  "getting-started": "Puesta en marcha",
+  "components": "Componentes",
+   "change-log": {
+    "title": "Registro de cambios",
+    "href": "https://github.com/polgubau/pol-ui/releases",
+    "newWindow": true
+  }
+}
