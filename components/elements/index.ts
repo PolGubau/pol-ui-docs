@@ -61,21 +61,10 @@ export const badge = tv({
   ]
 });
 
-export const card = tv({
-  base: [
-    'flex',
-    'flex-col',
-    'rounded-lg',
-    'shadow-lg',
-    'bg-white',
-    'overflow-hidden',
-    'dark:bg-zinc-500/20'
-  ]
-});
+
 
 export const tvs = {
   button,
   badge,
   box,
-  card
-};
+ };

@@ -10,5 +10,13 @@
     "theme": {
       "footer": false
     }
+  },
+  "templates": {
+    "title": "Plantillas",
+    "type": "page",
+    "href": "https://ui.polgubau.com",
+    "newWindow": true
   }
+
+ 
 }

@@ -8,7 +8,7 @@ const tailwindConfig = {
     "./components/**/*.{js,jsx,ts,tsx}",
     "./pages/**/*.{md,mdx}",
     "./theme.config.tsx",
-    "./node_modules/pol-ui/**/*.{js,jsx,ts,tsx,md,mdx}",
+    'node_modules/pol-ui/lib/esm/**/*.js',
 
   ],
   theme: {
@@ -21,17 +21,17 @@ const tailwindConfig = {
      
       colors: {
         primary: {
-          DEFAULT: "#F2A97E",
-          50: "#FEF9F6",
-          100: "#FDF3ED",
-          200: "#FCEBDE",
-          300: "#FBE3CE",
-          400: "#F9D2AF",
-          500: "#F2A97E",
-          600: "#D08F6A",
-          700: "#A97856",
-          800: "#7E6042",
-          900: "#654D35",
+          DEFAULT: "#B49CFF",
+          50: "#f2edff",
+          100: "#e2dbff",
+          200: "#dbcfff",
+          300: "#cfbfff",
+          400: "#bda8ff",
+          500: "#B49CFF",
+          600: "#8f7ccc",
+          700: "#6b5d99",
+          800: "#473e66",
+          900: "#241f33",
         },
         secondary: {
           DEFAULT: "#BFBFBF",
@@ -102,7 +102,7 @@ const tailwindConfig = {
       animation: {
         "fade-in": "fadeIn 200ms ease-in-out",
         rotate: "rotate 1s linear infinite",
-        blob: "blob 5s infinite",
+        blob: "blob 15s infinite",
 
 
       },
@@ -120,10 +120,10 @@ const tailwindConfig = {
             transform: "translate(0px, 0px) scale(1)",
           },
           "33%": {
-            transform: "translate(30px, -50px) scale(1.5)",
+            transform: "translate(30px, -50px) scale(1.3)",
           },
           "66%": {
-            transform: "translate(-20px, 20px) scale(0.9)",
+            transform: "translate(-20px, 20px) scale(0.7)",
           },
           "100%": {
             transform: "tranlate(0px, 0px) scale(1)",

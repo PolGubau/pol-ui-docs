@@ -9,32 +9,32 @@ interface FeaturesProps {}
 
 export const features = [
   {
-    name: 'All in one',
+    name: 'Todo en uno',
     description:
-      'Complete package from base features and funcitons to compound components, hooks and more.',
+      'Pol-ui es una librería de componentes que te permite crear interfaces de usuario de forma rápida y sencilla.',
     icon: <FlashIcon className="stroke-black dark:stroke-white" />
   },
   {
-    name: 'Typescript friendly',
+    name: 'Completamente en Typescript',
     description:
-      'Totally written in Typescript, so you can use it in your projects without any type problem.',
+      'Todos los componentes están escritos en Typescript, por lo que puedes  sacar el máximo provecho de tu editor de código.',
     icon: <CodeDocumentIcon className="stroke-black dark:stroke-white" />
   },
   {
-    name: 'Conflicts free',
+    name: 'Totalmente personalizable',
     description:
-      'Each classname is configured to be perfectly compatible with your Tailwind CSS classes.',
+      'Puedes personalizar los componentes de Pol-ui para que se adapten a tu marca.',
     icon: <MagicIcon className="stroke-black dark:stroke-white" />
   },
   {
-    name: 'React based',
+    name: 'Construido sobre React',
     description:
-      "Pol-ui is built on top of React, so you don't need to learn a new framework.",
+      "Pol-ui está construido sobre React, por lo que puedes usarlo en tus proyectos de React o Next.js sin ningún problema.",
     icon: <ServerIcon className="stroke-black dark:stroke-white" />
   }
 ];
 
-const Features: FC<FeaturesProps> = () => {
+const FeaturesES: FC<FeaturesProps> = () => {
   return (
     <section className="z-10 my-10 gap-6">
       <ul className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -61,4 +61,4 @@ const Features: FC<FeaturesProps> = () => {
   );
 };
 
-export default Features;
+export default FeaturesES;

@@ -3,13 +3,14 @@ import { Analytics } from '@vercel/analytics/react';
 
 import { isProd } from '@utils';
 import '../styles/global.css';
+import { PoluiProvider } from 'pol-ui';
 
 const App = ({ Component, pageProps }) => {
   return (
-    <>
+    <PoluiProvider>
       <Component {...pageProps} />
       {isProd && <Analytics />}
-    </>
+    </PoluiProvider>
   );
 };
 

@@ -1,7 +1,10 @@
 {
- "introduction": "Introducción",
+  "introduction": "Introducción",
   "getting-started": "Puesta en marcha",
   "components": "Componentes",
+  "nextjs": "Using Next.js",
+  "typescript": "Optimizando TypeScript",
+  "license": "Licencia",
    "change-log": {
     "title": "Registro de cambios",
     "href": "https://github.com/polgubau/pol-ui/releases",

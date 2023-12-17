@@ -22,9 +22,9 @@ const config: DocsThemeConfig = {
     defaultTheme: "dark",
   },
   logo: (
-    <div className="flex items-center">
-      <Logo height={30} />
-      <b className="mx-1.5 hidden text-sm font-semibold sm:block sm:text-base">
+    <div className="flex items-center gap-1">
+      <Logo height={25} />
+      <b className="mx-1.5 hidden text-md font-semibold sm:block sm:text-base mt-1">
         Pol-ui
       </b>
       <span className="hidden sm:flex opacity-70">
@@ -36,7 +36,7 @@ const config: DocsThemeConfig = {
     const config = useConfig();
     const description =
       config.frontMatter.description ||
-      "The power of pol combined with a first-class variant API.";
+      "Pol-ui is a complete solution to your interfaces in React";
     const image =
       config.frontMatter.image || "https://pol-ui.org/banner.png";
 

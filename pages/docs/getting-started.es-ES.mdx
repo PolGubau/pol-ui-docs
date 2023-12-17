@@ -8,7 +8,7 @@ import { SiNpm ,SiPnpm,SiYarn,SiNextdotjs} from "react-icons/si";
 
 ## Instalación [#installation]
 
-Para instalar con éxito **pol-ui**, ejecute el siguiente comando en su terminal:
+Para instalar con éxito **pol-ui**, ejecuta el siguiente comando en la terminal:
  <Tabs aria-label="Package instalators" >
  <Tabs.Item active title="npm" icon={SiNpm}>
     ```bash
@@ -36,7 +36,7 @@ A continuación veremos como se puede personificar los components de la manera m
 
 ### Paso 1. Instalar Tailwind CSS
 
-Si ya tiene instalado Tailwind en tu proyecto, salte directamente al [Paso 2](#step-2-configure-tailwind-css).
+Si ya tienes instalado Tailwind en tu proyecto, salta directamente al [Paso 2](#step-2-configure-tailwind-css).
 
 Para instalar Tailwind CSS, recomendamos seguir la [documentación oficial](https://tailwindcss.com/docs/installation).
 
@@ -68,20 +68,20 @@ Si tu proyecto usa **React** sin frameworks, te enseñamos como podrías hacerlo
 
 ### Paso 2. Configurar Tailwind CSS
 
-Copie esta configuración en la sección de `content` de su archivo `tailwind.config.js`:
+Copia esta configuración en la sección de `content` de su archivo `tailwind.config.js`:
 
 ```js {4-6}
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/pol-ui/src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}", // Si su proyecto usa src:
+    "./node_modules/pol-ui/src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: []
 }
 ```
 
@@ -104,7 +104,7 @@ Aún estos colores, puede extender los colores que usará su proyecto, esto no a
 
 De la misma manera, puedes extender `keyframes`, `animaciones`, `sombras`, etc.
 
-Se libre de modificarlas como prefiera.
+Se libre de modificarlas como prefieras.
 
 #### Ejemplo de una configuración de `tailwind.config.js` completa.
  <Tabs aria-label="Package instalators" >
@@ -232,7 +232,7 @@ export default config;
 
 ### 🟢 Todo hecho
 
-Ahora `pol-ui` está completeamente personalizado y preparado para ser usado en su aplicación.
+Ahora `pol-ui` está completeamente personalizado y preparado para ser usado en tu aplicación.
 
 ### Ejemplo de un botón
 

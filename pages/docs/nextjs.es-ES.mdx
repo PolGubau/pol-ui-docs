@@ -1,0 +1,57 @@
+---
+title: Usando Next.js - Pol-ui
+description: Sigue estos pasos para empezar a usar Pol-ui en Next.js.
+---
+
+ 
+# Añade Pol-ui a tu proyecto Next.js
+
+1. Instala las dependencias:
+
+```bash
+npm install --save autoprefixer postcss tailwindcss pol-ui
+```
+
+1. Crea `postcss.config.js`:
+
+```javascript
+module.exports = {
+  plugins: {
+    autoprefixer: {},
+    tailwindcss: {},
+  },
+};
+```
+
+3. Crea `tailwind.config.js`:
+
+```javascript
+/**
+ * @type {import('@types/tailwindcss/tailwind-config').TailwindConfig}
+ */
+module.exports = {
+  content: ['./node_modules/pol-ui/**/*.js', './pages/**/*.{ts,tsx}', './public/**/*.html'],
+  plugins: [require('flowbite/plugin')],
+  theme: {},
+};
+```
+
+4. Configura también los estilos globales `styles/globals.css`:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+5. Todo está listo para usar `pol-ui`!
+
+```jsx
+import { Alert } from 'pol-ui';
+
+export default function PaginaAlerta() {
+  return <Alert color="error">Eh tu😡</Alert>;
+}
+```
+
+ 

@@ -5,11 +5,13 @@ import LinkIcon from '@components/icons/link';
 
 interface HeroProps { }
 
-const Hero: FC<HeroProps> = () => {
+const HeroES: FC<HeroProps> = () => {
   return (
     <section
       className='relative mt-12 gap-6 lg:mt-24 xl:mt-32 w-full overflow-visible'
     >
+
+
       <header className='flex gap-4 items-center justify-center my-8'>
         <Logo height={ 90 } />
         <h1 className="text-5xl font-bold text-black dark:text-white md:text-8xl">
@@ -24,13 +26,13 @@ const Hero: FC<HeroProps> = () => {
       </div>
 
       <p className="mt-2 text-center text-lg font-medium">
-        Complete solution for your React interfaces
+        La completa solución a tus interfaces en React
       </p>
 
       <Snippet className="z-10 mt-8" />
 
       <div className='z-10 flex gap-2 justify-center my-6' >
-        <Button rounded='lg' outline className='bg-primary' href="/docs/introduction">Documentation</Button>
+        <Button rounded='lg' outline className='bg-primary' href="/docs/introduction">Documentación</Button>
 
         <Button outline rounded='lg' href="https://github.com/polgubau/pol-ui"
           rel="noopener noreferrer"
@@ -46,4 +48,4 @@ const Hero: FC<HeroProps> = () => {
   );
 };
 
-export default Hero;
+export default HeroES;
