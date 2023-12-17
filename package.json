@@ -36,10 +36,12 @@
     "nextra": "2.12.3",
     "nextra-theme-docs": "2.12.3",
     "pol-ui": "2.0.13",
+    "prismjs": "1.29.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "4.12.0",
     "sharp": "0.32.5",
+    "tailwind-merge": "2.1.0",
     "tailwind-variants": "0.1.18"
   },
   "devDependencies": {

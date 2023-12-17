@@ -1,9 +1,14 @@
 {
   "introduction": "Introducción",
   "getting-started": "Puesta en marcha",
+  "customize": "Personalización",
   "components": "Componentes",
-  "nextjs": "Using Next.js",
+  "nextjs": "Usando Next.js",
   "typescript": "Optimizando TypeScript",
+
+
+
+
   "license": "Licencia",
    "change-log": {
     "title": "Registro de cambios",

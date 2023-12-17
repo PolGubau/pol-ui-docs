@@ -1,0 +1,88 @@
+---
+title: Usando el modo oscuro - Pol-ui
+description: Añade el modo oscuro a tu aplicación de React o Next.js usando Pol-ui y modifica el tema a tu gusto.
+---
+import {Tabs} from 'pol-ui'
+
+# Usando el modo oscuro
+
+Si quieres añadir el modo oscuro a tu aplicación, puedes hacerlo fácilmente usando Pol-ui.
+
+Para realizar esto, Pol-ui hace uso del estándar [`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
+
+Envolviendo el contenido de tu aplicación con el componente `<PolUiProvider>`, y añadiendo el componente `<DarkThemeToggle>` dentro.
+
+Este detectará automáticamente el tema actual y mostrará el icono correcto, y permitirá al usuario cambiar entre temas a su gusto.
+
+ 
+```jsx
+import { DarkThemeToggle, PolUiProvider } from 'pol-ui';
+
+export default function MyPage() {
+  return (
+    <PolUiProvider>
+      ...
+      <DarkThemeToggle />
+      ...
+    </PolUiProvider>
+  );
+}
+```
+
+## Usando SSR en NextJS
+
+ 
+Si en tu aplicación usas SSR, como en Next.js, para evitar el parpadeo de la página (si el modo oscuro está activado) antes de que Next.js hidrate el contenido, el componente `ThemeModeScript` debe ser renderizado en el componente `Head` (ver implementación abajo).
+
+
+ <Tabs aria-label="Nextjs Configuration" className='mt-4'>
+ <Tabs.Item active title="App Router">
+    ### App router
+
+    ```tsx
+    // app/layout.tsx
+
+    import { ThemeModeScript } from 'pol-ui';
+
+    export default function RootLayout({ children }) {
+      return (
+        <html>
+          <head>
+            <ThemeModeScript />
+          </head>
+          <body>{children}</body>
+        </html>
+      );
+    }
+    ```
+  </Tabs.Item>
+  <Tabs.Item active title="Pages Router" >
+      ### Pages router
+
+      ```tsx
+      // pages/_document.tsx
+
+      import { ThemeModeScript } from 'pol-ui';
+
+      export default function Document() {
+        return (
+          <Html>
+            <Head>
+              <ThemeModeScript />
+            </Head>
+            <body>
+              <Main />
+              <NextScript />
+            </body>
+          </Html>
+        );
+      }
+      ```
+  </Tabs.Item>
+   
+  </Tabs>
+  
+  
+
+
+<div className="h-[20vh]" />

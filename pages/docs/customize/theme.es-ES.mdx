@@ -1,0 +1,88 @@
+---
+title: React Theme - Flowbite
+description: Learn how you can change the Tailwind CSS classes used by the components in Flowbite React
+---
+
+import { Callout } from 'nextra/components'
+
+# Configuración del tema
+
+Pol-ui usa activamente Tailwind CSS como motor de estilización, puedes usar esto a tu beneficio para **customizar cada aspecto de la librería**.
+
+Nos gusta mantener las cosas simples, así que no hemos añadido ninguna capa de abstracción entre Tailwind y Pol-ui. Esto significa que puedes usar Tailwind CSS directamente en los componentes de Pol-ui.
+
+## ¿Cómo customizar los componentes?
+Siguiendo el estándard en React, hemos seguido un par de maneras para personalizar nuestra interfaz. Veámoslas.
+ 
+### Manera 1. Cambiar clases
+
+La manera más fácil de customizar los componentes. Puedes cambiar las clases de Tailwind CSS directamente en el componente a través de la propiedad `className`.
+
+```jsx
+
+import { Button } from 'pol-ui';
+
+export default function MyPage() {
+  return <Button className="bg-success-500 hover:bg-success-600">Click me</Button>;
+}
+```
+
+Como se puede observar, esta manera es muy sencilla pero tiene un gran inconveniente, y es que tienes que cambiar la propiedad `className` en cada instancia del componente. Esto puede ser tedioso y propenso a errores. Además, algunos componentes tienen elementos anidados que no están expuestos directamente, lo que en algunos casos hace imposible esta manera.
+
+### Manera 2: Tema personalizado
+
+Vimos que otra manera de customizar los componentes siguiendo el estándar es a través de un tema personalizado. 
+No es más que un **objeto de JavaScript** que contiene las clases de Tailwind CSS que quieres usar en los componentes.
+Estas se aplicarán a todos los componentes que usen el tema personalizado.
+
+
+```tsx
+import type { CustomPoluiTheme } from 'pol-ui';
+import { PolUIProvider } from 'pol-ui';
+
+const temaPersonalizado: CustomPoluiTheme = {
+  button: {
+    color: {
+      primary: 'bg-success-500 hover:bg-success-600',
+    },
+  },
+};
+
+export default function RootLayout() {
+  return (
+    <PolUIProvider theme={{ theme: temaPersonalizado }}>
+      <Button color="primary">Click me</Button>
+    </PolUIProvider>
+  );
+}
+```
+
+`CustomPoluiTheme` es un tipo de dato que contiene todas las configuraciones para los componentes de Pol-ui.
+
+
+
+### Manera 3: Tema para un componente
+
+Si quieres customizar un componente en concreto, puedes hacerlo pasando un tema personalizado al componente. Esto sobreescribirá el tema global.
+
+
+```tsx
+import type { CustomPoluiTheme } from 'pol-ui';
+import { Button } from 'pol-ui';
+
+const temaCustom: CustomPoluiTheme['button'] = {
+  color: {
+    primary: 'bg-success-500',
+    // ...
+  },
+  // ...
+};
+
+export default function BrandButton() {
+  return (
+    <Button theme={temaCustom} color="primary">
+      Aceptar
+    </Button>
+  );
+}
+```

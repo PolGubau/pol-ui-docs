@@ -1,7 +1,4 @@
 {
- 
-   "button": {
-    "title": "Button"
-  }
-   
+  "accordion": "Accordion",
+   "button": "Button"
 }

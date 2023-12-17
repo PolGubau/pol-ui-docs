@@ -21,7 +21,9 @@
       "@hooks/*": ["./hooks/*"],
       "@hooks": ["./hooks/index.ts"],
       "@utils/*": ["./utils/*"],
-      "@utils": ["./utils/index.ts"]
+      "@utils": ["./utils/index.ts"],
+      "@examples/*": ["./examples/*"],
+      "@examples": ["./examples/index.ts"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
