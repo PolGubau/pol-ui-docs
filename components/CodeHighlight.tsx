@@ -8,7 +8,7 @@ import 'prismjs/components/prism-json';
 import 'prismjs/components/prism-jsx';
 import 'prismjs/components/prism-tsx';
 import 'prismjs/components/prism-typescript';
-
+ 
 Prism.manual = true;
 
 const languages = ['bash', 'css', 'javascript', 'js', 'json', 'jsx', 'ts', 'tsx', 'typescript'] as const;
@@ -20,12 +20,15 @@ export interface CodeHighlightProps extends React.ComponentProps<'pre'> {
   language: Language;
 }
 
-export function CodeHighlight({ code, language, className, ...props }: Readonly<CodeHighlightProps>) {
+export function CodeHighlight({ code, language='tsx', className, ...props }: CodeHighlightProps) {
   const highlightedCode = Prism.highlight(code.trim(), Prism.languages[language], language);
 
   return (
     <pre className={ twMerge(`language-${language}`, className) } { ...props }>
-      <code className={ `language-${language}` } dangerouslySetInnerHTML={ { __html: highlightedCode } } />
+      
+      <code className={`language-${language}`} dangerouslySetInnerHTML={{ __html: highlightedCode }} />
     </pre>
+   
+    
   );
 }

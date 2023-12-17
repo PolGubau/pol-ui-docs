@@ -2,8 +2,10 @@
 title: Accordion / Componente de React - Pol-ui
 description: El componente de acordeón de Pol-ui puede ser usado para mostrar y ocultar el contenido de cada panel de acordeón basado en múltiples ejemplos y estilos.
 ---
-import { AccordionExample } from '@examples'
+import { AccordionExample,ExampleAccordionCollapseAll } from '@examples/accordion'
+import {CodeDemo} from '@components';
 
+# Accordion
 The accordion component from Flowbite React can be used to toggle the visibility of the content of each accordion panel tab by expanding the collapsing the trigger element based on multiple examples and styles.
 
 The reactivity and state is handled by React and the components is built using the Tailwind CSS framework meaning that you can easily customize the styles and colors of the accordion.
@@ -18,12 +20,13 @@ import { Accordion } from 'pol-ui';
 
 Use this example of the `<Accordion>` component and the `<Accordion.Panel>` and `<Accordion.Title>` subcomponents to create an accordion with multiple panels.
 
-<AccordionExample/>
+<CodeDemo data={AccordionExample} />
 
  
 ## Collapse all
 
 Use this example to automatically collapse all of the accordion panels by passing the `collapseAll` prop to the `<Accordion>` component.
+<CodeDemo data={ExampleAccordionCollapseAll} />
 
  ## Theme
 

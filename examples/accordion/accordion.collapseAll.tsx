@@ -230,7 +230,7 @@ function Component() {
   );
 }
 
-export const collapseAll: CodeData = {
+export const ExampleAccordionCollapseAll: CodeData = {
   type: 'single',
   code: [
     {
