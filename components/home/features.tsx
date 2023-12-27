@@ -1,41 +1,18 @@
 import type { FC } from 'react';
 
-import FlashIcon from '@components/icons/flash';
-import CodeDocumentIcon from '@components/icons/code-document';
-import MagicIcon from '@components/icons/magic';
-import ServerIcon from '@components/icons/server';
 import { card } from '@components/elements';
 
-interface FeaturesProps {}
+export interface Feature {
+  name: string;
+  description: string;
+  icon: React.ReactNode;
+}
 
-export const features = [
-  {
-    name: 'Feature-rich',
-    description:
-      'Packed with powerful features like, slots, responsive variants, components composition, and more.',
-    icon: <FlashIcon className="stroke-black dark:stroke-white" />
-  },
-  {
-    name: 'Fully typed',
-    description:
-      'Auto-completion and type-safety are provided by TypeScript. No need to worry about typos.',
-    icon: <CodeDocumentIcon className="stroke-black dark:stroke-white" />
-  },
-  {
-    name: 'Safe',
-    description:
-      'Forget about TailwindCSS style conflicts. Tailwind Variants efficiently merges conflicting styles.',
-    icon: <MagicIcon className="stroke-black dark:stroke-white" />
-  },
-  {
-    name: 'Framework agnostic',
-    description:
-      "Tailwind Variants is a utility library that works with any framework. It's not tied to React.",
-    icon: <ServerIcon className="stroke-black dark:stroke-white" />
-  }
-];
+interface FeaturesProps {
+  features?: Feature[];
+}
 
-const Features: FC<FeaturesProps> = () => {
+const Features: FC<FeaturesProps> = ({ features }: FeaturesProps) => {
   return (
     <section className="z-10 my-10 gap-6">
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -45,7 +22,7 @@ const Features: FC<FeaturesProps> = () => {
             className={card({ class: 'gap-2 p-4 backdrop-blur' })}
           >
             <div className="flex items-center">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-neutral/10 dark:bg-white/10">
+              <div className="bg-neutral/10 flex h-12 w-12 items-center justify-center rounded-full dark:bg-white/10">
                 {feature.icon}
               </div>
               <h3 className="mx-3 text-lg font-bold text-black dark:text-white">

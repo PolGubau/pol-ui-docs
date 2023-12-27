@@ -10,31 +10,36 @@ import ServerIcon from '@components/icons/server';
 import { Hero, Features } from "@components";
 export const features = [
   {
-    name: 'Todo lo que necesitas',
-    description: '+50 componentes, hooks y muchas más utilidades para crear interfaces de usuario.',
+    name: 'Feature-rich',
+    description:
+      'Packed with powerful features like, slots, responsive variants, components composition, and more.',
     icon: <FlashIcon className="stroke-black dark:stroke-white" />
   },
   {
-    name: 'Completamente tipado',
-    description: 'Auto-completado y seguridad de tipos proporcionados por TypeScript. No te preocupes por los errores tipográficos.',
+    name: 'Fully typed',
+    description:
+      'Auto-completion and type-safety are provided by TypeScript. No need to worry about typos.',
     icon: <CodeDocumentIcon className="stroke-black dark:stroke-white" />
   },
   {
-    name: 'Sin conflictos',
-    description: 'Olvidate de los conflictos de estilos con TailwindCSS. Tailwind Variants fusiona eficientemente los estilos en conflicto.',
+    name: 'Safe',
+    description:
+      'Forget about TailwindCSS style conflicts. Tailwind Variants efficiently merges conflicting styles.',
     icon: <MagicIcon className="stroke-black dark:stroke-white" />
   },
   {
-    name: 'Agnostico al Framework',
-    description: 'Tailwind Variants es una librería de utilidades que funciona con cualquier framework. No está atada a React.',
+    name: 'Framework agnostic',
+    description:
+      "Tailwind Variants is a utility library that works with any framework. It's not tied to React.",
     icon: <ServerIcon className="stroke-black dark:stroke-white" />
   }
 ];
  
+ 
 <Hero
     texts={{
-        subtitle:
-        'La completa solución a tus interfaces en React'
+        subtitle: 'The complete solution to your React Interfaces'
     }}
     />
+
 <Features features={features}/>
