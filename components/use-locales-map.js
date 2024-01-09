@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
 
 /**
  * @typedef {"en-US"} DefaultLocale
@@ -12,12 +12,13 @@ export default function useLocalesMap(localesMap) {
   /** @type {NextRouter} */
   const router = useRouter();
   const { locale, defaultLocale } = router;
+
   if (!localesMap) {
-    throw new Error("Pass a locales map as argument to useLocalesMap");
+    throw new Error('Pass a locales map as argument to useLocalesMap');
   }
 
   if (!isObject(localesMap)) {
-    throw new Error("Locales map must be an object");
+    throw new Error('Locales map must be an object');
   }
 
   if (!localesMap.hasOwnProperty(defaultLocale)) {
@@ -35,11 +36,14 @@ export default function useLocalesMap(localesMap) {
     );
   }
 
-  if (["string", "number", "symbol"].includes(typeof localesMap[defaultLocale])) {
+  if (
+    ['string', 'number', 'symbol'].includes(typeof localesMap[defaultLocale])
+  ) {
     return localesMap[locale] || localesMap[defaultLocale];
   }
 
   const target = JSON.parse(JSON.stringify(localesMap[defaultLocale]));
+
   return mergeDeep(target, localesMap[locale]);
 }
 
@@ -49,7 +53,7 @@ export default function useLocalesMap(localesMap) {
  * @returns {boolean}
  */
 function isObject(item) {
-  return item && typeof item === "object" && !Array.isArray(item);
+  return item && typeof item === 'object' && !Array.isArray(item);
 }
 
 /**

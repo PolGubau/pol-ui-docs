@@ -1,15 +1,15 @@
 export default function BackendAgnosticIcon() {
   return (
     <svg
-      viewBox="0 0 24 24"
-      width="24"
+      fill="none"
       height="24"
+      shapeRendering="geometricPrecision"
       stroke="currentColor"
-      strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      fill="none"
-      shapeRendering="geometricPrecision"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+      width="24"
     >
       <path d="M20 17.58A5 5 0 0018 8h-1.26A8 8 0 104 16.25" />
       <path d="M8 16h.01" />
